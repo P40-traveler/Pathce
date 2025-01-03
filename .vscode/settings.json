@@ -1,0 +1,6 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "pathce/Cargo.toml",
+        "glogs/ir/Cargo.toml"
+    ]
+}

@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="ortools">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/ortools/Tsp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/RabbitsPheasants.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/protobuf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/com.google.ortools.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/Knapsack.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/SimpleLpProgram.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/Vrp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/SimpleMipProgram.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ortools/SimpleSatProgram.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

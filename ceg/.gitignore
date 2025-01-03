@@ -1,0 +1,12 @@
+!/lib
+!/lib/*.jar
+!/lib/ortools/*.jar
+!/.idea
+/out
+!CEExperiments.jar
+catalogue*.txt
+decom.csv
+estimation.csv
+ceg-*
+tmp1.csv
+tmp2.csv

@@ -1,0 +1,16 @@
+#!/bin/bash
+set -eu
+set -o pipefail
+
+query=$1
+graph_csv=$2
+output=$3
+
+java -Xmx200G -cp CEExperiments.jar Graphflow.LargeBenchmarkQueryDecomposer $query
+java -Xmx100G -cp CEExperiments.jar Graphflow.Catalogue $graph_csv catalogue_cyclic.txt
+java -Xmx200G -cp CEExperiments.jar Graphflow.TriangleCatalogue $graph_csv $query tmp1.csv tmp2.csv baseline
+cat tmp1.csv >> catalogue_cyclic.txt
+rm -f tmp1.csv tmp2.csv
+java -Xmx100G -cp CEExperiments.jar Graphflow.CyclicQueryEvaluation baseline catalogue_cyclic.txt true $query false true 2
+mv estimation.csv $output
+rm catalogue_cyclic.txt

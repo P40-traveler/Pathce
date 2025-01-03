@@ -1,0 +1,91 @@
+{
+    "entities": [
+        {
+            "columns": [],
+            "label": {
+                "id": 0,
+                "name": "vertex"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "columns": [],
+            "entity_pairs": [
+                {
+                    "src": {
+                        "id": 0,
+                        "name": "vertex"
+                    },
+                    "dst": {
+                        "id": 0,
+                        "name": "vertex"
+                    }
+                }
+            ],
+            "label": {
+                "id": 0,
+                "name": "0"
+            }
+        },
+        {
+            "columns": [],
+            "entity_pairs": [
+                {
+                    "src": {
+                        "id": 0,
+                        "name": "vertex"
+                    },
+                    "dst": {
+                        "id": 0,
+                        "name": "vertex"
+                    }
+                }
+            ],
+            "label": {
+                "id": 1,
+                "name": "1"
+            }
+        },
+        {
+            "columns": [],
+            "entity_pairs": [
+                {
+                    "src": {
+                        "id": 0,
+                        "name": "vertex"
+                    },
+                    "dst": {
+                        "id": 0,
+                        "name": "vertex"
+                    }
+                }
+            ],
+            "label": {
+                "id": 2,
+                "name": "2"
+            }
+        },
+        {
+            "columns": [],
+            "entity_pairs": [
+                {
+                    "src": {
+                        "id": 0,
+                        "name": "vertex"
+                    },
+                    "dst": {
+                        "id": 0,
+                        "name": "vertex"
+                    }
+                }
+            ],
+            "label": {
+                "id": 3,
+                "name": "3"
+            }
+        }
+    ],
+    "is_column_id": false,
+    "is_table_id": true
+}

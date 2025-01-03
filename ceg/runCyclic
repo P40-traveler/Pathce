@@ -1,0 +1,21 @@
+#!/bin/bash
+set -eu
+set -o pipefail
+
+query=$1
+catalog=$2
+schema=$3
+output=$4
+k=$5
+
+java -Xmx200G -cp CEExperiments.jar Graphflow.LargeBenchmarkQueryDecomposer $query
+# java -Xmx100G -cp CEExperiments.jar Graphflow.Catalogue $1 catalogue_cyclic.txt
+cp decom.csv catalogue_cyclic.txt
+java -Xmx200G -cp CEExperiments.jar Graphflow.TriangleCatalogue placeholder $query tmp1.csv placeholder dummy
+cat tmp1.csv >> catalogue_cyclic.txt
+rm -f tmp1.csv
+../scripts/glogs/build_ceg_catalog.sh $catalog $schema catalogue_cyclic.txt catalogue_cyclic.txt.tmp
+mv catalogue_cyclic.txt.tmp catalogue_cyclic.txt
+java -Xmx200G -cp CEExperiments.jar Graphflow.CyclicQueryEvaluation baseline catalogue_cyclic.txt true "$query" false true $k
+mv estimation.csv $output
+rm catalogue_cyclic.txt decom.csv

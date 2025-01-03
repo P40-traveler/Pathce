@@ -1,0 +1,6 @@
+kuzu == 0.6.0
+networkx == 3.3
+matplotlib == 3.9.2
+ipykernel == 6.29.5
+tabulate == 0.9.0
+tqdm == 4.67.1
